@@ -1,1 +1,1 @@
-FROM gcr.io/jenkinsxio/builder-python37:2.0.1194-535
+FROM gcr.io/jenkinsxio/builder-python37:2.0.1196-537
