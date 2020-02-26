@@ -1,1 +1,1 @@
-FROM gcr.io/jenkinsxio/builder-maven:2.0.1196-537
+FROM gcr.io/jenkinsxio/builder-maven:2.0.1194-535
