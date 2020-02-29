@@ -1,1 +1,1 @@
-FROM gcr.io/abayer-pipeline-crd/tekton-for-jx/nop:0.8.0-for-jx
+FROM gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.5.1
