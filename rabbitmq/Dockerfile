@@ -1,2 +1,2 @@
-FROM rabbitmq:3.8.0-alpine
+FROM rabbitmq:3.8.2-debian-10-r0
 
