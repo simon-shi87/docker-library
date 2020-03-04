@@ -1,1 +1,1 @@
-FROM quay.io/jetstack/cert-manager-webhook:v0.13.1
+FROM quay.io/jetstack/cert-manager-webhook:v0.9.0
