@@ -1,1 +1,1 @@
-FROM jaegertracing/jaeger-cassandra-schema:1.17.0
+FROM jaegertracing/jaeger-cassandra-schema:1.15.1
