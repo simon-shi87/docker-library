@@ -1,1 +1,1 @@
-FROM jenkinsci/jenkins:2.190.1
+FROM jenkins/jenkins:2.226
