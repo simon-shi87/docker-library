@@ -1,1 +1,1 @@
-FROM jenkins/jenkins:2.226
+FROM jenkinsci/blueocean:1.22.0
