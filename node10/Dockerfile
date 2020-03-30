@@ -10,4 +10,4 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/re
   && apk add --no-cache $PKGS \
   && apk add --no-cache libc6-compat
 
-RUN npm i yarn typescript -g
+RUN npm i yarn typescript next -g
