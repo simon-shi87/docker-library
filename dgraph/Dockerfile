@@ -1,1 +1,1 @@
-FROM dgraph/dgraph:v1.2.2
+FROM dgraph/dgraph:v20.03.0
