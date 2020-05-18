@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM mhart/alpine-node:12.16.3
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories \
   && apk update --no-cache \
