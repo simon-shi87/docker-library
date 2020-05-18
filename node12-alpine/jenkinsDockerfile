@@ -1,6 +1,4 @@
-ARG NODE_VERSION=12.16.3
-
-FROM mhart/alpine-node:$NODE_VERSION
+FROM node:12-alpine
 
 MAINTAINER Simon "simon.shi@treelab.co"
 
@@ -10,4 +8,4 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/re
   && apk add --no-cache $PKGS \
   && apk add --no-cache libc6-compat
 
-RUN npm i yarn typescript next -g
+RUN npm i yarn typescript -g
