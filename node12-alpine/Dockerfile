@@ -13,6 +13,3 @@ RUN apk add --update curl && \
   apk del curl && \
   apk add --no-cache bash && \
   rm -rf glibc.apk glibc-bin.apk /var/cache/apk/*
-
-RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
-
