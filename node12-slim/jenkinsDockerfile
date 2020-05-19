@@ -3,6 +3,6 @@ FROM node:12.16.3-slim
 MAINTAINER Simon "simon.shi@treelab.co"
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends git docker openssh-client make gcc g++ bash
+    && apt-get install -y --no-install-recommends git docker openssh-client make gcc g++ python linux-headers paxctl libgcc libstdc++ bash curl
 
 RUN npm i typescript -g
