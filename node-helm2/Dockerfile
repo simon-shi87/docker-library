@@ -1,4 +1,4 @@
-FROM registry.cn-zhangjiakou.aliyuncs.com/caminer/node:12-alpine
+FROM registry.cn-zhangjiakou.aliyuncs.com/caminer/jenkins-node:12.16.3-alpine
 
 RUN curl -LO https://git.io/get_helm.sh
 
