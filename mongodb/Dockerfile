@@ -1,1 +1,1 @@
-FROM docker.io/bitnami/mongodb:4.2.3-debian-10-r10
+FROM docker.io/bitnami/mongodb:4.2.8-debian-10-r33
