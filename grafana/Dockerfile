@@ -1,1 +1,1 @@
-FROM docker.io/bitnami/grafana:6.6.2-debian-10-r5
+FROM grafana/grafana:7.1.5
