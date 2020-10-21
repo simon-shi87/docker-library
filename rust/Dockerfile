@@ -1,1 +1,1 @@
-FROM rust:1.43.1
+FROM rust:1.47.0
