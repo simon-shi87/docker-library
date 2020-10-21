@@ -1,5 +1,5 @@
 FROM rust:1.47.0
-
+RUN rustup component add rustfmt --toolchain 1.47.0-x86_64-unknown-linux-gnu
 WORKDIR /usr/src/dgraph-ws-client
 
 RUN apt-get update
