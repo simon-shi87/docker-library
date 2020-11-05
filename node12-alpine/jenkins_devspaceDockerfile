@@ -16,4 +16,4 @@ RUN npm i typescript -g
 
 RUN curl -s -L "https://github.com/devspace-cloud/devspace/releases/latest" | sed -nE 's!.*"([^"]*devspace-linux-amd64)".*!https://github.com\1!p' | xargs -n 1 curl -L -o devspace && chmod +x devspace
 
-RUN sudo install devspace /usr/local/bin
+RUN install devspace /usr/local/bin
