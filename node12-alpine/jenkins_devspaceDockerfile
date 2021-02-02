@@ -6,7 +6,7 @@ ENV TZ=Asia/Shanghai
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories \
   && apk update --no-cache \
-  && export PKGS="git docker openssh-client make gcc g++ python linux-headers paxctl libgcc libstdc++ bash curl tzdata" \
+  && export PKGS="git docker openssh-client make gcc g++ python linux-headers paxctl libgcc libstdc++ bash curl tzdata tar" \
   && apk add --no-cache $PKGS \
   && apk add --no-cache libc6-compat \
   && echo "${TZ}" > /etc/timezone \
