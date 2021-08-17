@@ -1,0 +1,1 @@
+FROM openpolicyagent/opa:0.31.0-dev-debug
