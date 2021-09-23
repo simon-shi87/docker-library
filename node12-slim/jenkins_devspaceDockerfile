@@ -1,0 +1,17 @@
+FROM mhart/alpine-node:12.16.3
+
+ENV TZ=Asia/Shanghai
+
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories \
+  && apk update --no-cache \
+  && export PKGS="git docker openssh-client make gcc g++ python linux-headers paxctl libgcc libstdc++ bash curl tzdata tar" \
+  && apk add --no-cache $PKGS \
+  && apk add --no-cache libc6-compat \
+  && echo "${TZ}" > /etc/timezone \
+  && ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime
+
+RUN npm i typescript -g
+
+RUN curl -s -L "https://github.com/devspace-cloud/devspace/releases/latest" | sed -nE 's!.*"([^"]*devspace-linux-amd64)".*!https://github.com\1!p' | xargs -n 1 curl -L -o devspace && chmod +x devspace
+
+RUN install devspace /usr/local/bin
