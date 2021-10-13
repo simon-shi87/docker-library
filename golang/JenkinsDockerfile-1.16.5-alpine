@@ -2,10 +2,6 @@ From golang:1.16.5-alpine
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories \
   && apk update --no-cache \
-  && export PKGS="git docker openssh-client make gcc g++ linux-headers libgcc libstdc++ bash curl autoconf automake libtool unzip" \
+  && export PKGS="git docker openssh-client make gcc g++ linux-headers libgcc libstdc++ bash curl" \
   && apk add --no-cache $PKGS \
   && apk add --no-cache libc6-compat
-
-RUN git clone https://github.com/google/protobuf.git
-
-RUN cd ./protobuf && bash ./autogen.sh && ./configure && make && make install && ldconfig
