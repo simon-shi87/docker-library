@@ -1,6 +1,4 @@
-FROM mhart/alpine-node:12.20.1
-
-MAINTAINER Simon "simon.shi@treelab.co"
+FROM mhart/alpine-node:12.22.0
 
 ENV TZ=Asia/Shanghai
 
