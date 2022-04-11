@@ -1,4 +1,4 @@
-From golang:1.80-alpine3.14
+From golang:1.18-alpine3.14
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories \
   && apk update --no-cache \
