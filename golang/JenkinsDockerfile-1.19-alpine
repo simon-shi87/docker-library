@@ -1,19 +1,7 @@
 From golang:1.19.0-alpine
 
-ENV HOME=/root
-ENV PB_REL="https://ghproxy.com/https://github.com/protocolbuffers/protobuf/releases"
-
-RUN curl -LO $PB_REL/download/v3.20.0/protoc-3.20.0-linux-x86_64.zip && \
-    unzip protoc-3.20.0-linux-x86_64.zip -d $HOME/.local
-
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories \
   && apk update --no-cache \
   && export PKGS="git docker openssh-client make gcc g++ linux-headers libgcc libstdc++ bash curl" \
   && apk add --no-cache $PKGS \
   && apk add --no-cache libc6-compat
-
-RUN go install \
-    google.golang.org/protobuf/cmd/protoc-gen-go \
-    google.golang.org/grpc/cmd/protoc-gen-go-grpc
-
-ENV PATH="${PATH}:${HOME}/.local/bin"
