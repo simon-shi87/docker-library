@@ -7,7 +7,7 @@ ENV LC_ALL en_US.UTF-8
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN sed -i "s@http://deb.debian.org@http://mirrors.aliyun.com@g" /etc/apt/sources.list &&  rm -Rf /var/lib/apt/lists/*
-RUN apt-get update && apt-get install -y iputils-ping git postgresql postgresql-contrib wget
+RUN apt-get update && apt-get install -y iputils-ping git postgresql postgresql-contrib wget curl
 RUN apt-get install -y default-mysql-client
 RUN pip3 install colorlog==6.4.1
 RUN pip3 install ruamel.yaml==0.17.4
