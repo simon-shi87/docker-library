@@ -9,7 +9,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/re
   && apk add --no-cache \
      glibc-${GLIBC_VER}.apk \
      glibc-bin-${GLIBC_VER}.apk \
-  && && curl -sL https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv2.zip \    
+  && curl -sL https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv2.zip \    
   && unzip awscliv2.zip \
   && aws/install \
   && rm -rf \
