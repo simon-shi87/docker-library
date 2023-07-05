@@ -1,4 +1,4 @@
-FROM dtzar/helm-kubectl:3.9.3
+FROM treelab.tencentcloudcr.com/treelab-public/helm-kubectl:3.9.3
 
 ENV GLIBC_VER=2.31-r0
 
