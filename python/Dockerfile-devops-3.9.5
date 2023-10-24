@@ -1,5 +1,4 @@
-FROM alpine:latest AS helmDown
-RUN apk add --no-cache curl tar
+FROM registry.cn-zhangjiakou.aliyuncs.com/caminer/python:3.9.5-devops AS helmDown
 RUN curl -LO https://get.helm.sh/helm-v3.9.3-linux-amd64.tar.gz && \
     tar -zxvf helm-v3.7.0-linux-amd64.tar.gz 
 
