@@ -10,4 +10,4 @@
 
 FROM registry.cn-zhangjiakou.aliyuncs.com/caminer/treelab-pythoy:3.9.5
 RUN sed -i "s@http://deb.debian.org@http://mirrors.aliyun.com@g" /etc/apt/sources.list &&  rm -Rf /var/lib/apt/lists/*
-RUN apt-get install -y jq
+RUN apt-get update && apt-get install -y jq
